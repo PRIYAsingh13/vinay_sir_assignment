@@ -1,0 +1,48 @@
+/* *{ */
+  /* margin: 0; */
+  /* padding: 0; */
+  /* box-sizing: border-box; */
+/* } */
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.container{
+  /* border: 2px solid red; */
+}
+.firstLine, .secondLine, .thirdLine,.fourthLine, .fifthLine{
+  display: flex;
+}
+input[type="text"]{
+  height: 75px;
+  width: 249px;
+  background-color: black;
+  color: white;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+}
+.highlight{
+  background-color: rgb(0, 174, 255);
+}
+.keypad{
+  background-color: black;
+  
+}
+#clear ,#result{
+  width: 8.5vw;
+}
+button{
+  padding: 5%;
+  /* border: 1px solid red; */
+  margin: 1%;
+  background-color:grey;
+  color: white;
+  font-size: 25px;
+  width: 4vw;
+}
