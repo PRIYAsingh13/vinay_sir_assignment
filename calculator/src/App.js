@@ -11,7 +11,12 @@ const App = () => {
   const clear = () => {
     setResult("");
   };
-  const backspace = () => {};
+  const backspace = () => {
+    setResult(result.slice(0,result.length-1))
+  };
+  const calculate = () =>{
+    setResult(eval(result).toString())
+  }
 
   return (
     <div>
@@ -23,13 +28,15 @@ const App = () => {
           <button className="highlight" onClick={clear} id="clear">
             Clear
           </button>
-          <button className="" onClick={backspace} id="backspace">
+          <button className="highlight"
+          onClick={backspace} id="backspace">
             c
           </button>
-          <button name="/" onClick={handleClick}>
+          <button className="highlight"
+          name="/" onClick={handleClick}>
             &divide;
           </button>
-          <button name="7" onClick={handleClick}>
+          <button  name="7" onClick={handleClick}>
             7
           </button>
           <button name="8" onClick={handleClick}>
@@ -38,7 +45,8 @@ const App = () => {
           <button name="9" onClick={handleClick}>
             9
           </button>
-          <button name="*" onClick={handleClick}>
+          <button className="highlight"
+          name="*" onClick={handleClick}>
             &times;
           </button>
           <button name="4" onClick={handleClick}>
@@ -50,7 +58,8 @@ const App = () => {
           <button name="6" onClick={handleClick}>
             6
           </button>
-          <button name="-" onClick={handleClick}>
+          <button className="highlight"
+          name="-" onClick={handleClick}>
             &ndash;
           </button>
           <button name="1" onClick={handleClick}>
@@ -62,7 +71,8 @@ const App = () => {
           <button name="3" onClick={handleClick}>
             3
           </button>
-          <button name="+" onClick={handleClick}>
+          <button className="highlight"
+          name="+" onClick={handleClick}>
             +
           </button>
           <button name="0" onClick={handleClick}>
@@ -71,7 +81,8 @@ const App = () => {
           <button name="." onClick={handleClick}>
             .
           </button>
-          <button onClick={handleClick}>=</button>
+          <button className="highlight"
+          onClick={calculate} id="result">=</button>
         </div>
       </div>
     </div>
